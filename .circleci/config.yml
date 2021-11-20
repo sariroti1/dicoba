@@ -1,25 +1,11 @@
 version: 2.1
-workflows:
-  testing:
-    jobs:
-      - runner
 jobs:
   build:
     machine: true
-      image: ubuntu-2004:202010-01 # recommended linux image
+      image: ubuntu-2004:202010-01
     resource_class: large
     steps:
       - checkout
       - run:
-    command: |
-      echo Running test
-      set +e
-      mkdir -p /tmp/test-results
-      make test
-
-- run:
-    shell: /bin/sh
-    command: |
-      echo Running test
-      mkdir -p /tmp/test-results
-      make test
+          name: "Testing"
+          command: echo "Hi"
