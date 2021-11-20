@@ -1,9 +1,9 @@
 version: 2.1
 jobs:
-  build:
+  build: aqua
     machine:
       image: ubuntu-2004:202010-01
-    resource_class: xlarge      
+    resource_class: large      
     steps:
       - checkout
-      - run: echo "my custom checkout"
+      - run: echo "Aqua"
